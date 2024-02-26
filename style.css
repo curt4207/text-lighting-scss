@@ -1,0 +1,58 @@
+.overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 30vh;
+  z-index: 100;  
+
+  background: rgb(237, 236, 236);
+  background: linear-gradient(
+    0deg,
+    rgba(253, 252, 253, 0.852) 75%,
+		rgba(255, 255, 255, 0.9) 80%,
+		rgba(43, 8, 57, 0.25) 95%,
+		rgba(48, 2, 44, 0) 100%
+  );
+}
+.divGap {
+  margin: 20px;
+}
+
+.text {
+    font-size: 50px;
+    display: flex;
+    position: absolute;
+    bottom: 20vh;
+    left: 50%;
+/* letter-spacing: 5px; */
+    font-family: "Bangers", system-ui;
+    font-weight: 400;
+    font-style: normal;
+    transform: translateX(-50%);
+    user-select: none;
+    
+    .wapper {
+      padding-left: 15px;
+      padding-right: 15px;
+      padding-top: 15px;
+      .letter {
+        transition: ease-out 2s;
+        transform: translateY(40%);
+      }
+      .shadow {
+        transform: scale(1, -1);
+        color: #999999cb;
+        transition: ease-in 5s, ease-out 5s;
+      }
+      &:hover {
+        .letter {
+          transform: translateY(-200%);
+        }
+        .shadow {
+          opacity: 0;
+          transform: translateY(200%);
+        }
+      }
+    }
+  }
